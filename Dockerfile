@@ -62,7 +62,7 @@ RUN set -eux; \
         xvfb \
         zlib1g \
     ; \
-    if [ $(ls -1 /usr/share/fonts/truetype/msttcorefonts | wc -l) -eq 60 ]; then \
+    if [ $(ls -1 /usr/share/fonts/truetype/msttcorefonts | wc -l) -ne 60 ]; then \
         echo 'msttcorefonts failed to download'; \
         exit 1; \
     fi; \
