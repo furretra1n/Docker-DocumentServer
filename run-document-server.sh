@@ -455,7 +455,7 @@ update_nginx_settings(){
     sed 's,{{SSL_KEY_PATH}},'"${SSL_KEY_PATH}"',' -i ${NGINX_ONLYOFFICE_CONF}
 
     # turn on http2
-    sed 's,\(443 ssl\),\1 http2,' -i ${NGINX_ONLYOFFICE_CONF}
+    sed 's,\(4433 ssl\),\1 http2,' -i ${NGINX_ONLYOFFICE_CONF}
 
     # if dhparam path is valid, add to the config, otherwise remove the option
     if [ -r "${SSL_DHPARAM_PATH}" ]; then
